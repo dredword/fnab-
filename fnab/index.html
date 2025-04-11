@@ -1,22 +1,67 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Фан игра по FNaF</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #111;
+      color: white;
+    }
+    .header {
+      background-image: url('https://raw.githubusercontent.com/your-username/your-repository/main/shap.jpg'); /* Ссылка на шапку */
+      background-size: cover;
+      height: 200px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .header img {
+      width: 100px; /* Размер изображения иконки */
+      height: auto;
+      border-radius: 50%;
+    }
+    h1 {
+      font-size: 36px;
+      color: white;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    }
+    .content {
+      padding: 20px;
+      text-align: center;
+    }
+    .game-info {
+      font-size: 20px;
+    }
+    .game-info a {
+      color: #FFD700;
+      text-decoration: none;
+    }
+    .game-info a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
-<body style="background-color: #111; color: white; font-family: sans-serif; text-align: center;">
+<body>
+  <div class="header">
+    <img src="https://raw.githubusercontent.com/your-username/your-repository/main/fnab.png" alt="Иконка игры"> <!-- Ссылка на иконку (png) -->
+  </div>
 
-  <h1>Фан игра по FNaF</h1>
-  <p>Добро пожаловать! Здесь находится фанатский проект пока в разработке но ты можешь её затестить 🎮</p>
-
-  <hr>
-
-  <h2>🕹 Игра 1: FNaF Пародия</h2>
-  <p>Описание: Закрой двери, следи за врагом... классика с неожиданностями!</p>
-  <a href="fnaf_fangame.html" style="color: #00ffff;">Играть</a>
-
- </body>
+  <div class="content">
+    <h1>Фан игра по FNaF</h1>
+    <div>
+      <img src="https://raw.githubusercontent.com/your-username/your-repository/main/shap.jpg" alt="Шапка игры" style="width: 100%; height: auto;"> <!-- Ссылка на шапку -->
+    </div>
+    <p class="game-info">Добро пожаловать в фан-игру по FNaF! Это место для всех поклонников игры. Здесь вы найдете много интересного и увлекательного контента.</p>
+    <p class="game-info">Приятного просмотра и игры!</p>
+    <p>
+      <a href="https://raw.githubusercontent.com/your-username/your-repository/main/фнаф.apk" target="_blank">Скачать APK</a> <!-- Ссылка на APK -->
+    </p>
+  </div>
+</body>
 </html>
-<img src="fnab.png" alt="Фредди" width="100">
-
-<a href="фнаф.apk" download>Скачать APK файл</a>
