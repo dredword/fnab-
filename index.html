@@ -13,7 +13,7 @@
       color: white;
     }
     .header {
-      background-image: url('https://raw.githubusercontent.com/your-username/your-repository/main/background.jpg'); /* Ссылка на твоё изображение */
+      background-image: url('https://raw.githubusercontent.com/your-username/your-repository/main/shap.jpg'); /* Ссылка на шапку */
       background-size: cover;
       height: 200px;
       text-align: center;
@@ -21,25 +21,47 @@
       justify-content: center;
       align-items: center;
     }
-    .header a {
-      font-size: 24px;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 10px 20px;
+    .header img {
+      width: 100px; /* Размер изображения иконки */
+      height: auto;
+      border-radius: 50%;
     }
-    .header a:hover {
-      background-color: rgba(0, 0, 0, 0.7);
+    h1 {
+      font-size: 36px;
+      color: white;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    }
+    .content {
+      padding: 20px;
+      text-align: center;
+    }
+    .game-info {
+      font-size: 20px;
+    }
+    .game-info a {
+      color: #FFD700;
+      text-decoration: none;
+    }
+    .game-info a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
   <div class="header">
-    <a href="https://example.com">Перейти на сайт</a>
+    <img src="https://raw.githubusercontent.com/your-username/your-repository/main/fnab.png" alt="Иконка игры"> <!-- Ссылка на иконку (png) -->
   </div>
 
-  <h1>Фан игра по FNaF</h1>
-  <p>Добро пожаловать на мой сайт!</p>
+  <div class="content">
+    <h1>Фан игра по FNaF</h1>
+    <div>
+      <img src="https://raw.githubusercontent.com/your-username/your-repository/main/shap.jpg" alt="Шапка игры" style="width: 100%; height: auto;"> <!-- Ссылка на шапку -->
+    </div>
+    <p class="game-info">Добро пожаловать в фан-игру по FNaF! Это место для всех поклонников игры. Здесь вы найдете много интересного и увлекательного контента.</p>
+    <p class="game-info">Приятного просмотра и игры!</p>
+    <p>
+      <a href="https://raw.githubusercontent.com/your-username/your-repository/main/фнаф.apk" target="_blank">Скачать APK</a> <!-- Ссылка на APK -->
+    </p>
+  </div>
 </body>
 </html>
