@@ -2,66 +2,142 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Фан игра по FNaF</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
       background-color: #111;
       color: white;
+      font-family: Arial, sans-serif;
     }
+
+    /* Шапка (фон), которая видна по бокам */
     .header {
-      background-image: url('C:/Users/ТвоеИмя/Images/shap.jpg'); /* Локальный путь на твоем устройстве для шапки */
+      background-image: url('shap.jpg'); /* <-- твоя JPG фото */
       background-size: cover;
-      height: 200px;
-      text-align: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      background-position: center;
+      height: 100vh; /* Полная высота экрана */
+      position: relative;
     }
-    .header img {
-      width: 100px; /* Размер изображения иконки */
-      height: auto;
-      border-radius: 50%;
-    }
-    h1 {
-      font-size: 36px;
-      color: white;
-      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-    }
+
+    /* Контейнер для кнопки */
     .content {
-      padding: 20px;
+      position: absolute; /* Чтобы разместить по центру */
+      top: 50%; /* Центрируем по вертикали */
+      left: 50%; /* Центрируем по горизонтали */
+      transform: translate(-50%, -50%); /* Реальное центрирование */
+      text-align: center;
+      width: 100%; /* Чтобы кнопка была по ширине */
+    }
+
+    /* Иконка игры */
+    .icon img {
+      width: 200px;
+      height: auto;
+      border-radius: 20px;
+      margin-bottom: 30px;
+    }
+
+    /* Кнопка скачать */
+    .download a {
+      display: inline-block;
+      padding: 15px 25px;
+      background-color: #FFD700;
+      color: #111;
+      font-size: 18px;
+      text-decoration: none;
+      border-radius: 10px;
+      transition: background-color 0.3s;
+    }
+
+    .download a:hover {
+      background-color: #e6c200;
+    }
+
+    /* Серый фон под кнопкой и описание */
+    .description {
+      background-color: #333; /* Серый фон */
+      color: white;
+      padding: 30px 20px;
       text-align: center;
     }
-    .game-info {
-      font-size: 20px;
+
+    .description h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
     }
-    .game-info a {
-      color: #FFD700;
-      text-decoration: none;
+
+    .description p {
+      font-size: 18px;
+      line-height: 1.5;
     }
-    .game-info a:hover {
-      text-decoration: underline;
+
+    /* Техническое описание проекта */
+    .technical-description {
+      background-color: #222; /* Темный фон для технической информации */
+      color: white;
+      padding: 30px 20px;
+      margin-top: 20px; /* Отступ сверху */
+      text-align: center;
+    }
+
+    .technical-description h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .technical-description p {
+      font-size: 18px;
+      line-height: 1.5;
     }
   </style>
 </head>
 <body>
-  <div class="header">
-    <img src="C:/Users/ТвоеИмя/Images/fnab.png" alt="Иконка игры"> <!-- Локальный путь на твоем устройстве для иконки -->
+
+  <!-- Фоновая шапка, видимая по бокам -->
+  <div class="header"></div>
+
+  <!-- Контент: иконка и кнопка -->
+  <div class="content">
+    <div class="icon">
+      <img src="fnab.png" alt="Иконка игры">
+    </div>
+    <div class="download">
+      <!-- Ссылка на APK с Яндекс Диска -->
+      <a href="https://disk.yandex.ru/d/bPnizBdepMM_-A" download>Скачать игру</a>
+    </div>
   </div>
 
-  <div class="content">
-    <h1>Фан игра по FNaF</h1>
-    <div>
-      <img src="C:/Users/ТвоеИмя/Images/shap.jpg" alt="Шапка игры" style="width: 100%; height: auto;"> <!-- Локальный путь для шапки -->
-    </div>
-    <p class="game-info">Добро пожаловать в фан-игру по FNaF! Это место для всех поклонников игры. Здесь вы найдете много интересного и увлекательного контента.</p>
-    <p class="game-info">Приятного просмотра и игры!</p>
+  <!-- Серый фон с описанием игры -->
+  <div class="description">
+    <h2>Описание игры</h2>
     <p>
-      <a href="C:/Users/ТвоеИмя/Downloads/фнаф.apk" target="_blank">Скачать APK</a> <!-- Локальный путь для APK -->
+      Это фанатская игра по мотивам знаменитой серии "Five Nights at Freddy's". В этой игре вам предстоит пережить
+      ночи, исследуя таинственное место, полное загадок и угроз. Постарайтесь выжить, избегая
+      встреч с машинами для убийств и не попадаясь на их ловушки.
+    </p>
+    <p>
+      Пройдите все ночи, и прочувствуйте всю атмосферу ужаса.
     </p>
   </div>
+
+  <!-- Техническое описание проекта -->
+  <div class="technical-description">
+    <h2>ВАЖНО!</h2>
+    <p>
+      Этот проект создан на движке Unity и ещё находится на стадии разработки, в версии бета-тестирования, поэтому могут встречаться баги и незначительные проблемы с поведением врагов и прочие мелкие недочёты. Но скоро все эти неполадки будут устранены. Игра создана для платформы Android, и в ближайшее время будет переведена на стадию релиза.
+    </p>
+    <p>
+      Платформа: Android <br>
+      Язык программирования: C# <br>
+      Разработчик: Dredword
+    </p>
+  </div>
+
 </body>
 </html>
